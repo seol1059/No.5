@@ -11,63 +11,86 @@
 
 
     <style>
-        *{margin: 0 ; padding: 0;}
-        html,body {width: 100%; height: 100%;}
-        ul, li, ol {list-style: none;}
-        a {text-decoration: none; color: #666;}
-        button {border: none;}
 
-        header {width: 100%; height: 100px; margin: 0 auto; 
-            z-index: 100; display:flex; justify-content: space-around; align-items: center; 
-             position: fixed; }
+     *{margin: 0 ; padding: 0;}
+     html,body {width: 100%; height: 100%; }
+    ul, li, ol {list-style: none;}
+    a {text-decoration: none; color: #666;}
+     button {border: none;}
+
+      header {width: 100%; height: 100px; margin: 0 auto; border-top: 1px solid #666;
+         border-bottom: 1px solid #666;  position: fixed;
+        display:flex; justify-content: space-around; align-items: center;  z-index: 100; }
         header img {width: 30px ; height: 30px; padding-right: 20px;}
 
-        header:hover {background-color: white;}
+    header:hover {background-color: white; width: 100%; box-shadow: 4px 4px 4px #666;  }
+     header:hover  {width: 100%; height: 400px; align-items: flex-start; position: fixed;
+             display: flex;  border-radius: 0px 0px 50px 50px;}
 
-         #navbar {width: 100%; height: 100%; margin: 0 auto;
+     header:hover #navbar  {  display: flex; align-items: flex-start; margin-top: 40px;}
+     header:hover .logo {  display: flex; align-items: flex-start; }
+     header:hover .navba {  display: flex; align-items: flex-start; }
+     header:hover .menu{  display: flex; align-items: flex-start; }
+     header:hover .ko {  display: flex; align-items: flex-start;}
+     header:hover img { display: flex; align-items: flex-start; margin-top: 35px;}
+
+     header:hover .sub > li{ display:block; }
+
+
+
+
+
+      #navbar {width: 100%; height: 100%; margin: 0 auto;
              display: flex; justify-content: space-around; align-items: center;}
+
+      .logo {width: 200px; height: 100%; font-size: 24px; display: flex; align-items: center;}
+
+     .navba {width: 600px; height: 100%;
+       display: flex; align-items: center; justify-content: space-around;}
+
+    .navba .menu {width: 100%; height: 20%; margin: 0 auto;
+        display: flex; flex-direction: row; justify-content: space-evenly; align-items: center;}
+
+    .navba .menu > li {width: 100%; height: 100%; margin: 0 auto;  float: left;  }
+    .navba .menu > li a:hover  {color: red;}
+    .navba a {font-size: 16px;}
+
+
+    .sub { display:none;  margin-top: 50px; }
+    .sub li { height: 50px;}
+    .sub>li:hover a {color: red;}
+
+
+
+    .brli {width: 100%; height: 100%; margin: 0 auto; display: none; }
+    .brli:hover .menu {width: 100%; height: 500px; display: block; }
+
 
         
 
-        .logo {width: 200px; height: 100%; font-size: 24px; display: flex; align-items: center;}
-
-        .navba {width: 500px; height: 100%; display: flex; align-items: center; 
-            justify-content: space-around;}
-
-        .navba ul {width: 100%; height: 100%; margin: 0 auto; display: flex;
-    flex-direction: row; justify-content: space-evenly; align-items: center;}
-
-    .navba ul li {width: 100%; height: 100%; margin: 0 auto; display: flex;
-    flex-direction: row; justify-content: space-evenly; align-items: center;}
-
-    .brli {width: 100%; height: 100%; margin: 0 auto; display: none; }
-    .brli:hover ul {width: 100%; height: 500px; display: block; }
-
-
-        .navba a {font-size: 16px;}
-
      
 
-        .btn1 {width: 150px; height: 40px; border-radius: 50px; background-color: white; 
+   .btn1 {width: 150px; height: 40px; border-radius: 50px; background-color: white; 
             box-shadow: 5px 5px 5px dimgrey; color: black; font-size: 16px;}
-        .btn1:hover {   background-position: right center; 
-          background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f); 
-         box-shadow: 0 5px 15px rgba(242, 97, 103, .4);
-          color: white; transition: 0.5s; }
-           .btn1 a:hover {color: white;}
-        .btn1 p:hover  { color: white;}
+   .btn1:hover {   background-position: right center; 
+    background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f); 
+     box-shadow: 0 5px 15px rgba(242, 97, 103, .4); color: white; transition: 0.5s; }
+       .btn1 a:hover {color: white;}
+     .btn1 p:hover  { color: white;}
            
 
-          .ko {width: 50px; height: 100%; display: flex; align-items: center; 
-            justify-content: space-around;}
-            .ko select {width: 120px; height: 40px; border-radius: 50px; background-color: white;}
-            .ko option {background-color: white; border-radius: 50px;}
+   .ko {width: 50px; height: 100%; 
+    display: flex; align-items: center;  justify-content: space-around;}
+     .ko select {width: 120px; height: 40px; border-radius: 50px; background-color: white;}
+    .ko option {background-color: white; border-radius: 50px;}
 
 
-            #slide {width: 100%; height: calc( 100% - 100px ) ;
-         background-image: url(img/500.jpg); background-position: center; background-size: cover;
-        display: flex; flex-direction: column; justify-content: center; align-items: center;}
+      #slide {width: 100%; height: calc( 100% - 100px ) ;
+     background-image: url(img/500.jpg); background-position: center; background-size: cover;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;}
+
 .sl {width: 90%; height: 30%; margin: 0 auto; display: flex; margin-top: 300px;}
+
 .example {width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;}
 
 form.example input[type=text] {
@@ -117,45 +140,45 @@ form.example::after {
 
 .list {width: 30%; height: 100px; margin: 0 auto; }
 .list ul {width: 100%; height: 50%; margin: 0 auto; display: flex;}
-.list ul li {width: 20%; height: 100%; margin: 0 auto; border-radius: 50%; border:1px solid #666; 
-    display: flex; align-items: center; justify-content: center;}
+.list ul li {width: 20%; height: 100%; margin: 0 auto; border-radius: 50%; 
+    border:1px solid #666; display: flex; align-items: center; justify-content: center;}
 
 .wkehd {width: 100%; height: 130%; }
-.wk {width: 100%; height: 200px;  display: flex; justify-content: center;
-    align-items: flex-end;}
+.wk {width: 100%; height: 200px;  display: flex; justify-content: center; align-items: flex-end;}
 .wk p {font-size: 50px;}
 
 #slidewrap {width: 89%; height: 400px; margin: 50px auto; position: relative; overflow: hidden;}
-        .sli {width: 3016px; margin-left:0px;}        
-        .sli li {width: 300px; height: 350px; float: left; margin: 0 18px; display: flex;
+
+ .sli {width: 3016px; margin-left:0px;}        
+ .sli li {width: 300px; height: 350px; float: left; margin: 0 18px; display: flex;
     flex-direction: column;  justify-content: space-evenly; align-items: center;}
-        .sli li img {width: 100%; height: 85%; border-radius: 10px;}
-        .sli li:hover {margin-top: -9px;}
-        .sli li:hover a {background-color: green; color: aliceblue;}
-        .sli li:hover P:nth-of-type(1) {display: none;}
-        .sli li:hover P:nth-of-type(2) {display: block;}
+ .sli li img {width: 100%; height: 85%; border-radius: 10px;}
+.sli li:hover {margin-top: -9px;}
+ .sli li:hover a {background-color: green; color: aliceblue;}
+ .sli li:hover P:nth-of-type(1) {display: none;}
+ .sli li:hover P:nth-of-type(2) {display: block;}
 
 
-        #slidewrap >  span {position: absolute; top:50%; display: block; font-size: 38px; color:#000; 
-            line-height: 40px;
-         cursor: pointer; height: 50px; transform: translateY(-50%); }
-         #slidewrap >  span:hover {color:red;}
+ #slidewrap >  span {position: absolute; top:50%; display: block; font-size: 38px; color:#000; 
+ line-height: 40px; cursor: pointer; height: 50px; transform: translateY(-50%); }
+ #slidewrap >  span:hover {color:red;}
+
  
-        .prev {left:0; border-radius: 0 10px 10px 0px; padding: 0 8px 0 2px; }
-        .next {right:0; border-radius: 10px 0px 0px 10px; padding: 0 2px 0 8px; }
+   .prev {left:0; border-radius: 0 10px 10px 0px; padding: 0 8px 0 2px; }
+  .next {right:0; border-radius: 10px 0px 0px 10px; padding: 0 2px 0 8px; }
+  
 
-        .sli li a {width: 100%; height: 10%; margin: 0 auto; background-color: rgb(255, 226, 226); 
-            border-radius: 10px;  display: flex; justify-content: center;
-    align-items: center;}
+  .sli li a {width: 100%; height: 10%; margin: 0 auto; background-color: rgb(255, 226, 226); 
+  border-radius: 10px;  display: flex; justify-content: center; align-items: center;}
 
-    .sli li a:hover {background-color: green; color: aliceblue;}
+.sli li a:hover {background-color: green; color: aliceblue;}
 
-    .sli li a:hover P:nth-of-type(1) {display: none;}
-    .sli li a:hover P:nth-of-type(2) {display: block;}
-    .sli li a P:nth-of-type(2) {display: none;}
+  .sli li a:hover P:nth-of-type(1) {display: none;}
+.sli li a:hover P:nth-of-type(2) {display: block;}
+.sli li a P:nth-of-type(2) {display: none;}
 
-    .eh {width: 100%; height: 100px;  display: flex; justify-content: center;
-    align-items: flex-end;}
+
+.eh {width: 100%; height: 100px;  display: flex; justify-content: center; align-items: flex-end;}
 .eh p {font-size: 50px;}
 
 
@@ -166,16 +189,15 @@ form.example::after {
  display: flex;  flex-direction: column; justify-content: space-evenly; align-items: center;}
 .sli2 li img {width: 80%; height: 65%; border-radius: 10px; margin-top: 50px;}
 
-        span {position: absolute; top:50%; display: block; font-size: 38px; color:#fff; line-height: 40px;
-         cursor: pointer; height: 50px; transform: translateY(-50%); }
-        span:hover {color:#000;}
+.slidewrap2 > span {position: absolute; top:50%; display: block; font-size: 38px; color:#fff; line-height: 40px;
+ cursor: pointer; height: 50px; transform: translateY(-50%); }
+ .slidewrap2 >  span:hover {color:#000;}
  
-        .prev2 {left:0; border-radius: 0 10px 10px 0px; padding: 0 8px 0 2px;}
-        .next2 {right:0; border-radius: 10px 0px 0px 10px; padding: 0 2px 0 8px;}
+ .prev2 {left:0; border-radius: 0 10px 10px 0px; padding: 0 8px 0 2px;}
+ .next2 {right:0; border-radius: 10px 0px 0px 10px; padding: 0 2px 0 8px;}
 
-        .sli2 li a {width: 100%; height: 3%; margin: 0 auto; 
-            border-radius: 10px;  display: flex; justify-content: center; flex-direction: column;
-    align-items: center; margin-top: 20px;}
+ .sli2 li a {width: 100%; height: 3%; margin: 0 auto;   border-radius: 10px;   margin-top: 20px;
+    display: flex; justify-content: center; flex-direction: column; align-items: center;  }
 
     /* .sli2 li a:hover {background-color: green; color: aliceblue;} */
 
@@ -195,10 +217,10 @@ form.example::after {
     #sinbg {width: 1200px; height: 400px; margin: 0 auto; display: flex;
         flex-direction: row; justify-content: space-around; align-items: center;}
 
- .sin1 {width: 45%; height: 75%; margin: 0 auto; background-color: #f9f9f9; border-radius: 20px;
- display: flex; justify-content: center; align-items: center;}
- .n1 {width: 50%; height: 100%; margin: 0 auto; float: left; display: flex; flex-direction: column;
-    justify-content: space-evenly; align-items: center; }
+ .sin1 {width: 45%; height: 75%; margin: 0 auto; background-color: #f9f9f9;
+     border-radius: 20px; display: flex; justify-content: center; align-items: center;}
+ .n1 {width: 50%; height: 100%; margin: 0 auto; float: left; 
+    display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; }
    
 
  .n1 a { background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f); 
@@ -228,39 +250,40 @@ form.example::after {
  .qna1 {width: 100%; height: 10%; margin: 0 auto; display: flex;
      justify-content: space-around; flex-direction: row; align-items: center;}
 
- .qna1 p {width: 20%; height: 50%; border-radius: 20px;
+ .qna1 p {width: 20%; height: 50%; border-radius: 20px; border: 1px solid #666;
     display: flex;  flex-direction: column; justify-content: center; align-items: center;
-    background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f); }
+   }
+   .qna1 p:hover {  background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);}
 
 
 .qna2 {width: 100%; height: 40%; margin: 0 auto; }
 .qna2 ul {width: 100%; height: 100%; margin: 0 auto; display: flex; flex-direction: row;
     flex-wrap: wrap; align-items: center;   }
-.qna2 ul li {width: 45%; height: 30%; margin: 0 auto; border-radius: 50px; display: flex; 
-    flex-direction: row; justify-content: space-between; align-items: center;
-     background-color: tomato; }
+.qna2 ul li {width: 45%; height: 25%; margin: 0 auto; border-radius: 50px; 
+    display: flex;  flex-direction: row; justify-content: space-between; align-items: center;
+    background-color: #f9f9f9;     box-shadow: inset 0px 5px 10px 0 rgb(121 121 121 / 8%);}
 .qna2 ul li p {font-size: 16px; padding: 20px;}
-.qna2 ul li img {width: 10%; height: 50%; border-radius: 50%; padding: 20px;  transform: scale(0);}
+.qna2 ul li img {width: 10%; height: 50%; border-radius: 50%; padding: 20px; transform: scale(0);}
 .qna2 ul li:hover p {font-weight: bold;}
 .qna2 ul li:hover img { transform: scale(1);  transition: 0.5s ; }
 
 .qna3 {width: 100%; height: 40%; margin: 0 auto;  display: flex;}
 
 .a1 {width: 45%; height: 100%; margin: 0 auto; float: left; background-color: #666; 
-    border-radius: 20px;  display: flex; flex-direction: column; flex-wrap: wrap; 
+    border-radius: 20px; display: flex; flex-direction: column; flex-wrap: wrap; 
     align-items: center; justify-content: space-evenly;}
     .a1 p {width: 45%;}
     .a1 a {width: 35%; height: 15%; display: flex;   justify-content: center;
     align-items: center; border-radius: 50px;
          background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f); }
-    .a1 img {width: 50%; height: 80%; float: right;}
+    .a1 img {width: 35%; height: 55%; float: right;}
 
     
 .a2 {width: 45%; height: 100%; margin: 0 auto; float: right; background-color: #666; 
     border-radius: 20px;  display: flex; flex-direction: column; flex-wrap: wrap; 
     align-items: center; justify-content: center;}
 
-    .a2 img {width: 50%; height: 80%; float: right;}
+    .a2 img {width: 35%; height: 55%; float: right;}
 
 
 
@@ -282,11 +305,11 @@ form.example::after {
 
 
 
-                <ul>
+                <ul class="menu">
                     <li>
                         <a href="">회사소개</a>
-                        <div class="brli">
-                            <ul>
+                       
+                            <ul class="sub">
                                 <li>
                                     <a href="">CEO인사말</a>
                                 </li>
@@ -303,23 +326,91 @@ form.example::after {
                                     <a href="">히스토리</a>
                                 </li>
                             </ul>
-                        </div>
+                      
                     </li>
                 
                     <li>
                         <a href="">제품 소개</a>
+                        <ul class="sub">
+                            <li>
+                                <a href="">CEO인사말</a>
+                            </li>
+                    
+                            <li>
+                                <a href="">경영이념</a>
+                            </li>
+                    
+                            <li>
+                                <a href="">사업분야</a>
+                            </li>
+                    
+                            <li>
+                                <a href="">히스토리</a>
+                            </li>
+                        </ul>
                     </li>
                 
                     <li>
-                        <a href="">지속가능경영</a>
+                        <a href="">제품 소개</a>
+                        <ul class="sub">
+                            <li>
+                                <a href="">컵</a>
+                            </li>
+                    
+                            <li>
+                                <a href="">바</a>
+                            </li>
+                    
+                            <li>
+                                <a href="">디저트</a>
+                            </li>
+                    
+                            <li>
+                                <a href="">케이크</a>
+                            </li>
+                        </ul>
                     </li>
                 
                     <li>
                         <a href="">투자정보</a>
+                        <ul class="sub">
+                            <li>
+                                <a href="">CEO인사말</a>
+                            </li>
+                    
+                            <li>
+                                <a href="">경영이념</a>
+                            </li>
+                    
+                            <li>
+                                <a href="">사업분야</a>
+                            </li>
+                    
+                            <li>
+                                <a href="">히스토리</a>
+                            </li>
+                        </ul>
                     </li>
                 
                     <li>
                         <a href="">고객센터</a>
+                        <ul class="sub">
+                            <li>
+                                <a href="">CEO인사말</a>
+                            </li>
+                    
+                            <li>
+                                <a href="">경영이념</a>
+                            </li>
+                    
+                            <li>
+                                <a href="">사업분야</a>
+                            </li>
+                    
+                            <li>
+                                <a href="">히스토리</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
         
@@ -332,7 +423,44 @@ form.example::after {
             </div>
 
 
+            <script>
 
+                $(function(){
+          
+                  $('.menu>li').mouseover(function(){
+          
+                  $('.sub').stop().slideDown();
+          
+                 }).mouseout(function(){
+          
+                  $('.sub').stop().slideUp();
+          
+                  });
+          
+                });
+          
+              </script>
+
+<script>
+
+    $(function(){
+
+      $('header').mouseover(function(){
+
+      $('.sub').stop().slideDown(1);
+
+     }).mouseout(function(){
+
+      $('.sub').stop().slideUp(0);
+
+      });
+
+    });
+
+  </script>
+
+  
+      
     <!-- <div class="brli">
         <ul>
             <li>
@@ -744,14 +872,14 @@ form.example::after {
             최대한 빠른 시일 내에 친절하게<br>
             답변해 드리겠습니다.</p><br>
             <a href=""><p>상담하기</p></a>
-            <img src="img/0.jpg" alt="">
+            <img src="img/mail.png" alt="">
         </div>
 
         <div class="a2">
             <h3>전화 상담</h3>
             <h2>080.022.0056</h2><br>
             <p>월 ~ 금(공휴일 제외) <b>09:00~17:30</b></p>
-            <img src="img/0.jpg" alt="">
+            <img src="img/rescue.png" alt="">
         </div>
 
     </div>
