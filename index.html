@@ -28,22 +28,28 @@
              display: flex;  border-radius: 0px 0px 50px 50px;}
 
      header:hover #navbar  {  display: flex; align-items: flex-start; margin-top: 40px;}
-     header:hover .logo {  display: flex; align-items: flex-start; }
+     header:hover .logo {  display: flex; align-items: flex-start; margin-top: -6px;}
      header:hover .navba {  display: flex; align-items: flex-start; }
      header:hover .menu{  display: flex; align-items: flex-start; }
-     header:hover .ko {  display: flex; align-items: flex-start;}
+     header:hover .ko {  display: flex; align-items: flex-start; }
      header:hover img { display: flex; align-items: flex-start; margin-top: 35px;}
+     header:hover .rnao {  display: flex; align-items: flex-start; margin-top: -10px; }
+     header:hover .logo a img {width: 50%; height: 30%;  display: flex; align-items: flex-start;} 
+
 
      header:hover .sub > li{ display:block; }
 
 
 
 
-
+ 
       #navbar {width: 100%; height: 100%; margin: 0 auto;
              display: flex; justify-content: space-around; align-items: center;}
 
       .logo {width: 200px; height: 100%; font-size: 24px; display: flex; align-items: center;}
+      .logo a {width: 100%; height: 100%; display: flex;justify-content: center;
+    align-items: center;} 
+    .logo a img {width: 50%; height: 30%;}
 
      .navba {width: 600px; height: 100%;
        display: flex; align-items: center; justify-content: space-around;}
@@ -127,8 +133,10 @@ form.example button {
   border-left: none;
   cursor: pointer;
   border-radius: 50px;
+  
 }
 
+form.example button a { color: white;}
 /* form.example button:hover {
     background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f); 
     box-shadow: 0 5px 15px rgba(242, 97, 103, .4);
@@ -142,7 +150,7 @@ form.example::after {
 
 .list {width: 30%; height: 100px; margin: 0 auto; }
 .list ul {width: 100%; height: 50%; margin: 0 auto; display: flex;}
-.list ul li {width: 20%; height: 100%; margin: 0 auto; border-radius: 50%; 
+.list ul li {width: 23%; height: 100%; margin: 0 auto; border-radius: 50px; 
     border:1px solid #666; display: flex; align-items: center; justify-content: center;}
 
 .wkehd {width: 100%; height: 130%; }
@@ -155,8 +163,8 @@ form.example::after {
  .sli li {width: 245px; height: 280px; float: left; margin: 0 18px; display: flex;
     flex-direction: column;  justify-content: space-evenly; align-items: center;}
  .sli li img {width: 100%; height: 85%; border-radius: 10px;}
-.sli li:hover {margin-top: -9px;}
- .sli li:hover a {background-color: green; color: aliceblue;}
+.sli li:hover {margin-top: -9px; transition: 0.5s;}
+ .sli li:hover a { background-image: linear-gradient(to top, #ed1c24, #e0462e); color: aliceblue;}
  .sli li:hover P:nth-of-type(1) {display: none;}
  .sli li:hover P:nth-of-type(2) {display: block;}
 
@@ -189,9 +197,14 @@ form.example::after {
  .sli2 li {width: 250px; height: 250px; float: left; margin: 0 18px; background-color: #fff;
  border-radius: 20px;   border: 1px solid #edecef;
  display: flex;  flex-direction: column; justify-content: space-evenly; align-items: center;}
-.sli2 li img {width: 80%; height: 65%; border-radius: 10px; margin-top: 50px;}
+.sli2 li img {width: 55%;
+    height: 35%;
+    border-radius: 10px;
+    margin-top: 50px;
+}
 
-.slidewrap2 > span {position: absolute; top:50%; display: block; font-size: 38px; color:rgb(182, 80, 80); line-height: 40px;
+.slidewrap2 > span {position: absolute; top:50%; display: block; font-size: 38px; 
+    color:rgb(182, 80, 80); line-height: 40px;
  cursor: pointer; height: 50px; transform: translateY(-50%); }
  .slidewrap2 >  span:hover {color:#000;}
  
@@ -205,14 +218,14 @@ form.example::after {
 
 
 
-    .sli2 li a p {display: none;}
+    .sli2 li a p {display: none; }
     .sli2 li:hover { box-shadow: 10px 10px 10px rgba(153, 153, 153, 153); 
         transition: 0.5s ; padding-top: 20px; margin-bottom: 10px;}
     .sli2 li:hover img {margin-top: -20px; transition: 0.5s ;}
     .sli2 li:hover P:nth-of-type(1) {display: block; margin-top: -20px; transition: 0.5s ; }
     .sli2 li:hover P:nth-of-type(2) {display: block;  transition: 0.5s ; width: 80%;
-        text-align: center; border-radius: 10px;
-        background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f); }
+        text-align: center; border-radius: 10px; color: #fff;
+        background-image: linear-gradient(to top, #ed1c24, #e0462e);}
     .sli2 li a P:nth-of-type(2) {display: none;}
 
 
@@ -220,9 +233,10 @@ form.example::after {
         flex-direction: row; justify-content: space-around; align-items: center;}
 
  .sin1 {width: 45%; height: 75%; margin: 0 auto;  border-radius: 20px;
-     background-position: center; background-size: cover; background-image: url(img/sec04_backimg03.png);
+     background-position: center; background-size: cover; 
+     background-image: url(img/sec04_backimg03.png);
      display: flex; justify-content: center; align-items: center;}
- .n1 {width: 50%; height: 100%; margin: 0 auto; float: left; 
+ .n1 {width: 50%; height: 80%; margin: 0 auto; float: left; 
     display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; }
    
 
@@ -236,10 +250,11 @@ form.example::after {
  .n2 {width: 35%; height: 70%; margin: 0 auto; float: right; display: flex; }
 
  .sin2 {width: 45%; height: 75%; margin: 0 auto; border-radius: 20px;
-    background-position: center; background-size: cover; background-image: url(img/sec04_backimg04.png);
+    background-position: center; background-size: cover; 
+    background-image: url(img/sec04_backimg04.png);
      display: flex; justify-content: center; align-items: center;}
 
- .n3 {width: 50%; height: 100%; margin: 0 auto; float: left;  
+ .n3 {width: 50%; height: 80%; margin: 0 auto; float: left;  
     display: flex; flex-direction: column; justify-content: space-around; align-items: center;}
 
     .n3 a { box-shadow: inset 0px 5px 10px 0 rgb(53 53 53 / 11%);
@@ -251,13 +266,14 @@ form.example::after {
  .n4 {width: 35%; height: 70%; margin: 0 auto; float: right; display: flex; }
 
 
- #qnabg {width: 1200px; height: 70%; margin: 0 auto; border: 1px solid rgb(189, 189, 189); 
-    border-radius: 20px; box-shadow: 10px 10px 10px 10px #666;     
+ #qnabg {width: 1200px; height: 70%; margin: 0 auto; 
+    /* border: 1px solid rgb(189, 189, 189);  */
+    border-radius: 20px; box-shadow: 0px 5px 24.3px 2.7px rgb(0 0 0 / 9%);   
     display: flex; flex-direction: row; flex-wrap: wrap;}
  .qna1 {width: 93%; height: 10%; margin: 0 auto; display: flex;
      justify-content: space-between; flex-direction: row; align-items: flex-end;}
 
- .qna1 p {width: 20%; height: 50%; border-radius: 20px; border: 1px solid #666;
+ .qna1 p {width: 20%; height: 50%; border-radius: 20px; border: 1px solid rgb(201, 201, 201);
     display: flex;  flex-direction: column; justify-content: center; align-items: center;
    }
    .qna1 p:hover {  box-shadow: inset 0px 5px 10px 0 rgb(53 53 53 / 11%);
@@ -271,22 +287,32 @@ form.example::after {
     display: flex;  flex-direction: row; justify-content: space-between; align-items: center;
     background-color: #f9f9f9;     box-shadow: inset 0px 5px 10px 0 rgb(121 121 121 / 8%);}
 .qna2 ul li p {font-size: 16px; padding: 20px;}
-.qna2 ul li img {width: 7%; height: 50%; border-radius: 50%; padding: 20px; transform: scale(0);}
+.qna2 ul li a {width: 7%; height: 50%; border-radius: 50%; padding: 20px; display: none;
+     background-image: linear-gradient(to top, #ed1c24, #e0462e);}
+.qna2 ul li a img {width: 100%; height: 100%;}
 .qna2 ul li:hover p {font-weight: bold;}
-.qna2 ul li:hover img { transform: scale(1);  transition: 0.5s ; }
+.qna2 ul li:hover a  {  transition: 0.5s ;  display: block;}
 
 .qna3 {width: 100%; height: 40%; margin: 0 auto;  display: flex;}
 
 .a1 {width: 45%; height: 100%; margin: 0 auto; float: left; background-color: #eef8fa ; 
-    background-position: center; background-size: cover; background-image: url(img/sec04_backimg01.png);
+    background-position: center; background-size: cover;
+     background-image: url(img/sec04_backimg01.png);
     border-radius: 20px; display: flex; flex-direction: column; flex-wrap: wrap; 
     align-items: center; justify-content: space-evenly;}
     .a1 p {width: 45%;}
     .a1 a {width: 35%; height: 15%; display: flex;   justify-content: center;
-    align-items: center; border-radius: 50px;
+    align-items: center; border-radius: 50px; color: #fff;
     box-shadow: inset 0px 5px 10px 0 rgb(53 53 53 / 11%);
     background-image: linear-gradient(to top, #ed1c24, #e0462e);}
     .a1 img {width: 35%; height: 55%; float: right;}
+
+.a12 {    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;}
 
     
 .a2 {width: 45%; height: 100%; margin: 0 auto; float: right; 
@@ -316,7 +342,8 @@ align-items: flex-end}
     
         <div id="navbar">
         
-           <div class="logo">nattur</div>
+           <div class="logo"><a href=""><img src="img/logo-pc.png" alt=""></a>
+           </div>
         
             <div class="navba">
 
@@ -556,10 +583,10 @@ align-items: flex-end}
 
         <div class="list">
             <ul>
-                <li>컵</li>
-                <li>바</li>
-                <li>디저트</li>
-                <li>케이크</li>
+                <li># 링키바</li>
+                <li># 더단백</li>
+                <li># 요플레프로틴</li>
+                <li># 바나나맛우유</li>
             </ul>
         </div>
 
@@ -578,66 +605,74 @@ align-items: flex-end}
 
         <ul class="sli">
             <li>
-                <img src="img/0.jpg" alt="slide image">
+                <img src="img/sec02_img01.png" alt="slide image">
                 <a href="#">
-                    <p>컵</p>
+                    <p>아이스크림</p>
+                    <p>VIEW MORE</p>
+                </a>
+            </li>
+
+            <li>
+                <img src="img/sec02_img02.png" alt="slide image">
+                <a href="#">
+                    <p>우유/치즈</p>
+                    <p>VIEW MORE</p>
+                </a>
+            </li>
+
+            <li>
+                <img src="img/sec02_img03.png" alt="slide image">
+                <a href="#">
+                    <p>발효유</p>
+                    <p>VIEW MORE</p>
+                </a>
+            </li>
+
+            <li>
+                <img src="img/sec02_img04.png" alt="slide image">
+                <a href="#">
+                    <p>커피</p>
+                    <p>VIEW MORE</p>
+                </a>
+            </li>
+
+            <li>
+                <img src="img/sec02_img05.png" alt="slide image">
+                <a href="#">
+                    <p>음료</p>
+                    <p>VIEW MORE</p>
+                </a>
+            </li>
+
+            <li>
+                <img src="img/sec02_img06.png" alt="slide image">
+                <a href="#">
+                    <p>주스</p>
                     <p>바로가기</p>
                 </a>
             </li>
 
             <li>
-                <img src="img/0.jpg" alt="slide image">
+                <img src="img/sec02_img07.png" alt="slide image">
                 <a href="#">
-                    <p>컵</p>
-                    <p>바로가기</p>
+                    <p>스낵/디저트</p>
+                    <p>VIEW MORE</p>
                 </a>
             </li>
 
             <li>
-                <img src="img/0.jpg" alt="slide image">
+                <img src="img/sec02_img08.png" alt="slide image">
                 <a href="#">
-                    <p>컵</p>
-                    <p>바로가기</p>
+                    <p>건강지향식품</p>
+                    <p>VIEW MORE</p>
                 </a>
             </li>
 
             <li>
-                <img src="img/0.jpg" alt="slide image">
+                <img src="img/sec02_img09.png" alt="slide image">
                 <a href="#">
-                    <p>컵</p>
-                    <p>바로가기</p>
-                </a>
-            </li>
-
-            <li>
-                <img src="img/0.jpg" alt="slide image">
-                <a href="#">
-                    <p>컵</p>
-                    <p>바로가기</p>
-                </a>
-            </li>
-
-            <li>
-                <img src="img/0.jpg" alt="slide image">
-                <a href="#">
-                    <p>컵</p>
-                    <p>바로가기</p>
-                </a>
-            </li>
-
-            <li>
-                <img src="img/0.jpg" alt="slide image">
-                <a href="#">
-                    <p>컵</p>
-                    <p>바로가기</p>
-                </a>
-            </li>
-
-            <li>
-                <img src="img/0.jpg" alt="slide image">
-                <a href="#">
-                    <p>컵</p>
-                    <p>바로가기</p>
+                    <p>수출제품</p>
+                    <p>VIEW MORE</p>
                 </a>
             </li>
 
@@ -695,65 +730,73 @@ align-items: flex-end}
 
         <ul class="sli2">
             <li>
-                <img src="img/0.jpg" alt="slide image">
+                <img src="img/m_sec02_logo01.png" alt="slide image">
                 <a href="#">
-                    <p>컵</p>
+                    <p>빙그레 건강 tft의<br>
+                        단백질 전문 브랜드</p>
                     <br>
-                    <p>바로가기</p>
+                    <p>구입하기</p>
                 </a>
             </li>
 
             <li>
-                <img src="img/0.jpg" alt="slide image">
+                <img src="img/sec02_logo02.png" alt="slide image">
                 <a href="#">
-                    <p>컵</p>
+                    <p>부담없는 캐주얼한 커피</p>
                     <br>
-                    <p>바로가기</p>
+                    <p>구입하기</p>
                 </a>
             </li>
 
             <li>
-                <img src="img/0.jpg" alt="slide image">
+                <img src="img/sec02_logo03.png" alt="slide image">
                 <a href="#">
-                    <p>컵</p>
+                    <p>39년 전통의<br>
+                        대한민국 Heritage</p>
                     <br>
-                    <p>바로가기</p>
+                    <p>구입하기</p>
                 </a>
             </li>
 
             <li>
-                <img src="img/0.jpg" alt="slide image">
+                <img src="img/sec02_logo04.png" alt="slide image">
                 <a href="#">
-                    <p>컵</p>
+                    <p>대한민국을 대표하는<br>
+                        No.1 가공 우유
+                        </p>
                     <br>
-                    <p>바로가기</p>
+                    <p>구입하기</p>
                 </a>
             </li>
 
             <li>
-                <img src="img/0.jpg" alt="slide image">
+                <img src="img/sec02_logo05.png" alt="slide image">
                 <a href="#">
-                    <p>컵</p>
+                    <p>진한 맛의 감동<br>
+                        프리미엄 아이스크림</p>
                     <br>
-                    <p>바로가기</p>
+                    <p>구입하기</p>
                 </a>
             </li>
 
             <li>
-                <img src="img/0.jpg" alt="slide image">
+                <img src="img/sec02_logo06.png" alt="slide image">
                 <a href="#">
-                    <p>컵</p>
+                    <p>남자들을 위한 건강플랜,<br>
+                        마노플랜</p>
                     <br>
-                    <p>바로가기</p>
+                    <p>구입하기</p>
                 </a>
             </li>
 
             <li>
-                <img src="img/0.jpg" alt="slide image">
+                <img src="img/sec02_logo07.png" alt="slide image">
                 <a href="#">
-                    <p>컵</p>
+                    <p>
+                        맛과 건강의 완벽한 조화,<br>
+                        비바시티</p>
                     <br>
-                    <p>바로가기</p>
+                    <p>구입하기</p>
                 </a>
             </li>
 
@@ -851,32 +894,32 @@ align-items: flex-end}
 
         <li>
             <p>Q. 아이스크림에는 왜 유통기한이 없나요?</p>
-            <img src="img/0.jpg" alt="">
+            <a href=""><img src="img/link_arrow01.png" alt=""></a>
         </li>
 
         <li>
             <p>Q. 구매일이 불분명하고 영수증이 없지만 제품의 유통기한이 지났습니다.</p>
-            <img src="img/0.jpg" alt="">
+            <a href=""><img src="img/link_arrow01.png" alt=""></a>
         </li>
 
         <li>
             <p>Q. 제품 유통기한 뒤에 있는 알파벳 기호는 무엇인가요?</p>
-            <img src="img/0.jpg" alt="">
+            <a href=""><img src="img/link_arrow01.png" alt=""></a>
         </li>
 
         <li>
             <p>Q. 나뚜루는 HACCP 인증을 모두 받았나요?</p>
-            <img src="img/0.jpg" alt="">
+            <a href=""><img src="img/link_arrow01.png" alt=""></a>
         </li>
 
         <li>
             <p>Q. 디저트 유통기한을 어떻게 읽나요?</p>
-            <img src="img/0.jpg" alt="">
+            <a href=""><img src="img/link_arrow01.png" alt=""></a>
         </li>
 
         <li>
             <p>Q. 나뚜루 서체의 사용 범위를 알고 싶어요.</p>
-            <img src="img/0.jpg" alt="">
+            <a href=""><img src="img/link_arrow01.png" alt=""></a>
         </li>
 
        </ul>
@@ -886,12 +929,14 @@ align-items: flex-end}
     <div class="qna3">
 
         <div class="a1">
+            <div class="a12">
             <h3>이메일 상담</h3>
             <p>나뚜루에 궁금한 사항을 문의해 주세요.<br>
             최대한 빠른 시일 내에 친절하게<br>
             답변해 드리겠습니다.</p><br>
             <a href=""><p>상담하기</p></a>
             <!-- <img src="img/mail.png" alt=""> -->
+        </div>
         </div>
 
         <div class="a2">
