@@ -311,7 +311,7 @@ form.example::after {
     display: flex;  flex-direction: column; justify-content: center; align-items: center;
    }
    .qna1 p:hover {  box-shadow: inset 0px 5px 10px 0 rgb(53 53 53 / 11%);
-    background-image: linear-gradient(to top, #ed1c24, #e0462e);}
+    background-image: linear-gradient(to top, #ed1c24, #e0462e); color: #fff;}
 
    .qna1 h3 {   font-family: 'Binggrae-Bold'; font-weight: bold;}
 
@@ -373,11 +373,34 @@ form.example::after {
     .a2_1 h3 {    font-size: 32px;  font-family: 'Binggrae-Bold'; font-weight: bold;}
     .a2_1 h4 {    font-size: 32px;  font-family: 'Binggrae-Bold'; font-weight: bold;}
 
-    #foo {width: 100%; height: 500px;  display: flex;  
-align-items: flex-end}
-    footer {width: 100%; height: 450px; background-color: #666;}
+    footer {width: 100%; height: 500px; background-color: #666;}
+    #foo {width: 1200px; height: 500px; margin: 0 auto; }
 
+    .fot {width: 1200px; height: 100px; display: flex; justify-content: space-evenly; }
+    .fot1 {width: 600px; height: 100px; display: flex; align-items: center;}
+    .fot1 img {width: 100px; height: 50px;}
+    .fot2 {width: 305px; height: 100px;    float: right;
+    display: flex; align-items: center; justify-content: space-around; }
 
+    .for1 {    width: 600px; height: 350px;     float: left;
+    display: flex; flex-direction: column;  justify-content: space-between;}
+
+    .for2 { width: 600px; height: 300px; float: right; display: flex; flex-direction: column;
+        align-items: flex-end; justify-content: space-around; }
+        .for2 a:nth-of-type(1) {width: 70px; height: 70px; background-color: #24201f; 
+   display: flex; justify-content: center; align-items: center; border-radius: 50%;}
+        .for2 a:nth-of-type(2) {width: 70px; height: 70px; background-color: #f0e4e3; 
+            display: flex;  justify-content: center; align-items: center; border-radius: 50%;}
+    .for2 img {width: 50px; height: 50px;}
+
+    .for3 {width: 600px; height: 100px; float: right; display: flex; justify-content: space-evenly;}
+    .for3 a:nth-of-type(1) {width: 70px; height: 70px;}
+    .for3 a:nth-of-type(2) {width: 70px; height: 70px;}
+    .for3 a:nth-of-type(3) {width: 70px; height: 70px;}
+    .for3 a:nth-of-type(4) {width: 140px; height: 70px; display: flex; 
+    flex-direction: row; justify-content: center; align-items: center;}
+    .for3 a:nth-of-type(4) p {font-size: 14px; color: #ddd;}
+    .for3 a img {width: 70px; height: 70px;}
 
     </style>
 
@@ -1045,20 +1068,54 @@ align-items: flex-end}
 
 </div>
 
-<div id="foo">
-    <footer>
 
-    </footer>
+<footer>
+    <div id="foo">
+    
+        <div class="fot">
+            <div class="fot1">
+                <img src="img/f_logo.png" alt="">
+    
+            </div>
+            <div class="fot2">
+                <p>개인정보처리방침</p>
+                <p>오시는길</p>
+            </div>
+        </div>
 
-</div>
+    <div class="for1">
+        <p>회사명 : 빙그레 <br>
+            경기도 남양주시 다산동 4344-3 / 경기도 남양주시 다산순환로 45(다산동)</p>
+        <p>ⓒ Binggrae all rights reserved.</p>
+    </div>
+
+    <div class="for2">
+      <a href=""><p>SHOP</p></a>
+      <a href=""><img src="img/up-arrow.png" alt=""></a> 
+    </div>
+
+    <div class="for3">
+        <a href=""><img src="img/instagram.png" alt=""></a> 
+        <a href=""><img src="img/youtube.png" alt=""></a> 
+        <a href=""><img src="img/facebook.png" alt=""></a> 
+        <a href=""><img src="img/flag_store.png" alt=""><p>thesoftlab</p></a> 
+    </div>
 
 
 
 
 
 
-    <script>
-     
-    </script>
+
+    </div>
+
+
+</footer>
+
+
+
+
+
+ 
 </body>
 </html>
